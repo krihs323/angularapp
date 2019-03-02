@@ -4,9 +4,24 @@
 
 <strong>Two way data-binding</strong>
 <input type="text" [(ngModel)]="color_seleccionado" />
-<pre [style.border]="color_seleccionado == 'red' ? '5px solid black' : '1px solid green'">
+<pre [style.border]="color_seleccionado == 'red' ? '5px solid black' : '1px solid green'"
+     [class.bordeAzul]="color_seleccionado == 'blue'"
+>
   {{color_seleccionado}}
 </pre>
+
+<hr>
+<strong>Directiva ngClass</strong>
+<pre [style.border]="color_seleccionado == 'red' ? '5px solid black' : '1px solid green'"
+     [ngClass]="{
+       fondoAzul: color_seleccionado == 'blue',
+       fondoVerde: color_seleccionado == 'green',
+       letraGrande: 1 == 1
+     }"
+>
+{{color_seleccionado}}
+</pre>
+
 <div [ngStyle]="{'background':color_seleccionado, 'width':'200px', 'height':'200px', 'float':'right', 'margin-right':'69%'}"></div>
 <div style="clear:both"></div>
 
