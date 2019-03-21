@@ -1,12 +1,16 @@
 <h1>{{titulo}}</h1>
 
-
+{{fecha | date:'dd/MM/yyyy'}}
+{{fecha | date:'fullDate' | uppercase | lowercase}}
+<br>
+{{nombre | uppercase}}
 <hr>
 
 <input type="text" [(ngModel)]="prenda_a_guardar"><button (click)="guardarPrenda()">Guardar Prenda</button>
 <br>
 <span *ngIf="prenda_a_guardar"><b>{{prenda_a_guardar}}</b></span>
 <br>
+
 
 <h2>Listado Coleccion</h2>
 <ul>
