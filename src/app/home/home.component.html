@@ -6,6 +6,9 @@
 {{nombre | uppercase}}
 <hr>
 
+Pipe Personalizada:
+{{5 | conversor: 7}}
+
 <input type="text" [(ngModel)]="prenda_a_guardar"><button (click)="guardarPrenda()">Guardar Prenda</button>
 <br>
 <span *ngIf="prenda_a_guardar"><b>{{prenda_a_guardar}}</b></span>
