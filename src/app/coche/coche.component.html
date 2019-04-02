@@ -1,7 +1,7 @@
 <h1>Coches</h1>
 <hr>
 
-<form #formCoche="ngForm" (ngSubmit)="onSubmit()">
+<form #formCoche="ngForm" (ngSubmit)="onSubmit();formCoche.reset();">
     <p>
         <label>Nombre:</label>
         <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="coche.nombre" required>
@@ -25,7 +25,18 @@
     </p>
 
     <p>
-        <input type="submit" value="Guardar">
+        <input type="submit" value="Guardar" [disabled]="!formCoche.form.valid">
     </p>
+
+    <hr>
+
+    <h1>Coches</h1>
+    <div *ngFor="let coche of coches">
+        <ul>
+            <li>{{coche.nombre}} - {{coche.caballaje}} - {{coche.color}}</li>
+        </ul>
+    </div>
+
+
 
 </form>
