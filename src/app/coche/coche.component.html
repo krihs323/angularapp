@@ -37,6 +37,17 @@
         </ul>
     </div>
 
+    <hr>
+    <h1>Productos</h1>
+
+    {{productos}}
+    <div *ngFor="let articulo of articulos">
+        <ul>
+            <li>{{articulo.id}} - {{articulo.title}}</li>
+        </ul>
+    </div>
+
+
 
 
 </form>
