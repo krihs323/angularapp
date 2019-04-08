@@ -40,12 +40,14 @@
     <hr>
     <h1>Productos</h1>
 
-    {{productos}}
-    <div *ngFor="let articulo of articulos">
-        <ul>
-            <li>{{articulo.id}} - {{articulo.title}}</li>
-        </ul>
-    </div>
+    <ul *ngIf="productos" >
+        <li *ngFor="let producto of productos">
+            {{producto.id}} - {{producto.title}}
+        </li>
+    </ul>
+    <span *ngIf="!productos">
+        Cargando Listado...
+    </span>
 
 
 

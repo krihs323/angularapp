@@ -6,28 +6,21 @@ import {map} from 'rxjs/operators';
 import {Observable} from 'rxjs/Observable';
 
 @Injectable()
-export class PeticionesService{
-
+export class PeticionesService  {
     public url: string;
-    
-    /*constructor(private _http:HttpClientModule){
-        //this.url = 'https://my-json-server.typicode.com/typicode/demo/posts';
-    }*/
     constructor(
         public http: HttpClient
-    ){
+    )    {
         this.url = 'https://my-json-server.typicode.com/typicode/demo/posts';
     }
 
-    getProductos(): Observable<any>{
+    getProductos(): Observable<any> {
         return this.http.get(this.url);
     }
 
-    getPrueba(){
+    getPrueba() {
         //Uso de la libreria rxjs operators
         //.pipe(map(res => res.json())); 
         return "Hola mundodo desde el servicio peticiones!!";
     }
-
-  
 }

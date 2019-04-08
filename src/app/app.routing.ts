@@ -7,6 +7,7 @@ import { FrutaComponent } from './fruta/fruta.component';
 import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { CocheComponent } from './coche/coche.component';
+import { PlantillaComponent } from './plantilla/plantilla.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -16,6 +17,7 @@ const appRoutes: Routes = [
   {path: 'contacto/:page', component: ContactoComponent},
   {path: 'contacto', component: ContactoComponent},
   {path: 'coche', component: CocheComponent},
+  {path: 'plantillas', component: PlantillaComponent},
   {path: '**', component: HomeComponent},
 ];
 
